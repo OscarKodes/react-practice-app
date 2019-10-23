@@ -1,0 +1,12 @@
+.SlotLine {
+    margin: 1rem 3rem;
+    font-size: .7rem;
+}
+
+.SlotLine .invis {
+    visibility: hidden;
+}
+
+.SlotLine .show {
+    visibility: visible;
+}
