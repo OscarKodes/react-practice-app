@@ -1,0 +1,24 @@
+.ClickButton {
+    margin: .3rem auto;
+    border-radius: 0.2rem;
+    width: 100%;
+}
+
+.ClickButton .secondary:hover,
+.ClickButton .primary:hover {
+    box-shadow: 0 .3rem .3rem #333;
+    background-color: rgb(67, 99, 99);
+    color: white;
+}
+
+.ClickButton .secondary {
+    background-color: white;
+    color: darkslategrey;
+}
+
+.ClickButton .primary {
+    background-color: darkolivegreen;
+    color: white;
+    box-shadow: 0 2px 2px #222;
+    font-size: 1.5rem;
+}

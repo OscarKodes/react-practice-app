@@ -25,6 +25,7 @@ class App extends Component {
 
     return (
       <div className={classes.App}>
+        <h1>React MadLibs</h1>
         <StoryPicker clicked={this.storyPickHandler} />
         {storyForm}
       </div>

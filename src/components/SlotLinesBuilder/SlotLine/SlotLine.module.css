@@ -1,6 +1,8 @@
 .SlotLine {
-    margin: 1rem 3rem;
-    font-size: .7rem;
+    margin: 0 2rem;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 2rem;
 }
 
 .SlotLine .invis {
@@ -9,4 +11,58 @@
 
 .SlotLine .show {
     visibility: visible;
+    animation: fadeIn 1.5s;
 }
+
+.SlotLine input {
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    border: 1px skyblue solid;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }

@@ -27,7 +27,9 @@ class StoryLayout extends Component {
         <SlotLinesBuilder 
           story={this.props.story}
           show={this.state.textShow} />
-        <ClickButton clicked={this.showToggleHandler}>Show Story</ClickButton>
+        <ClickButton 
+          btnType="primary"
+          clicked={this.showToggleHandler}>Show Story</ClickButton>
       </div>
     );
   }

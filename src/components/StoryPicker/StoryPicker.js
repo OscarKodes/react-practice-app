@@ -1,5 +1,6 @@
 import React from 'react';
 import ClickButton from '../ClickButton/ClickButton';
+import classes from './StoryPicker.module.css';
 
 const ALL_STORIES = [
     {
@@ -13,7 +14,22 @@ const ALL_STORIES = [
             {
                 leftText: "Why are your ",
                 blankSlot: "Plural Noun",
-                rightText: " all over the room?"
+                rightText: " all over the room? Be sure to clean that up!"
+            },
+            {
+                leftText: "By the way, the weather will be very ",
+                blankSlot: "Adjective",
+                rightText: " today."
+            },
+            {
+                leftText: "Be sure to bring your ",
+                blankSlot: "Noun",
+                rightText: "!"
+            },
+            {
+                leftText: "I can't believe your were still ",
+                blankSlot: "Verb",
+                rightText: "ing at this time!"
             },
             {
                 leftText: "Whatever, just get ready for the ",
@@ -44,7 +60,17 @@ const ALL_STORIES = [
                 leftText: " the ",
                 blankSlot: "Plural Noun",
                 rightText: "?"
-            }
+            },
+            {
+                leftText: "In any case, someone should really ",
+                blankSlot: "Verb",
+                rightText: ""
+            },
+            {
+                leftText: " those ",
+                blankSlot: "Plural Noun",
+                rightText: ". It's getting out of hand."
+            },
         ]
     },
     {
@@ -56,12 +82,57 @@ const ALL_STORIES = [
                 rightText: "."
             },
             {
+                leftText: "At this event we will ",
+                blankSlot: "Verb",
+                rightText: ""
+            },
+            {
+                leftText: " ",
+                blankSlot: "Name",
+                rightText: ""
+            },
+            {
+                leftText: " and ",
+                blankSlot: "Name",
+                rightText: "."
+            },
+            {
                 leftText: "If you are ",
                 blankSlot: "Verb",
                 rightText: "ing. Please let us know ASAP."
             },
         ]
-    }
+    },
+    {
+        title: "Isekai'd",
+        storyText: [
+            {
+                leftText: "Welcome, to the world of ",
+                blankSlot: "Plural Noun",
+                rightText: "."
+            },
+            {
+                leftText: "Here you are a ",
+                blankSlot: "Noun",
+                rightText: "."
+            },
+            {
+                leftText: "And you can ",
+                blankSlot: "Verb",
+                rightText: " all you want!"
+            },
+            {
+                leftText: "But you must remember that your mission is to ",
+                blankSlot: "Verb",
+                rightText: ""
+            },
+            {
+                leftText: " ",
+                blankSlot: "Plural Noun",
+                rightText: ". We hope you enjoy your stay."
+            }
+        ]
+    },
 ];
 
 const storyPicker = (props) => {
@@ -71,15 +142,15 @@ const storyPicker = (props) => {
             return (
                 <ClickButton 
                     key={"story" + i} 
+                    btnType="secondary"
                     clicked={() => props.clicked(story)}>{story.title}</ClickButton>
             )
         })
 
     return (
-        <React.Fragment>
-            <h1>Story Picker</h1>
+        <div className={classes.StoryPicker}>
             {storyBtns}
-        </React.Fragment>
+        </div>
     )
 }
 
