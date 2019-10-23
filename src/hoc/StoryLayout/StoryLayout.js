@@ -19,7 +19,7 @@ class StoryLayout extends Component {
     return (
       <div className={classes.StoryLayout}>
         <SlotLinesBuilder 
-          text={this.props.story}
+          story={this.props.story}
           show={this.state.textShow} />
         <ClickButton clicked={this.showToggleHandler}>Show Story</ClickButton>
       </div>

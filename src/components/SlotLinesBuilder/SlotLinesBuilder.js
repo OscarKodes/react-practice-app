@@ -4,23 +4,20 @@ import SlotLine from './SlotLine/SlotLine';
 
 const slotLinesBuilder = (props) => {
     
-    let allLines = null;
-
-    if (props.text.length > 0) {
-        allLines = props.text.map((line, i) => {
+    let allLines = props.story.storyText.map((line, i) => {
             return (
                 <SlotLine
-                    key={i} 
+                    key={props.story.title + i} 
                     leftText={line.leftText}
                     blankSlot={line.blankSlot}
                     rightText={line.rightText}
                     show={props.show} />
             )
         });
-    }
 
     return (
         <React.Fragment>
+            <h3>{props.story.title}</h3>
             {allLines}
         </React.Fragment>
     )
