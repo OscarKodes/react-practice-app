@@ -9,6 +9,12 @@ class StoryLayout extends Component {
     textShow: false
   }
 
+  componentDidUpdate(nextProps) {
+      if (this.props !== nextProps) {
+          this.setState({textShow: false});
+      }
+  }
+
   showToggleHandler = () => {
     this.setState(prevState => {
       return {textShow: !prevState.textShow}
