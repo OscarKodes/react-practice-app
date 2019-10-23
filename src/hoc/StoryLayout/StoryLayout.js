@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import SlotLinesBuilder from '../../components/SlotLinesBuilder/SlotLinesBuilder';
-import ToggleButton from '../../components/ToggleButton/ToggleButton';
+import ClickButton from '../../components/ClickButton/ClickButton';
 import classes from './StoryLayout.module.css';
 
 class StoryLayout extends Component {
@@ -21,7 +21,7 @@ class StoryLayout extends Component {
         <SlotLinesBuilder 
           text={this.props.story}
           show={this.state.textShow} />
-        <ToggleButton clicked={this.showToggleHandler} />
+        <ClickButton clicked={this.showToggleHandler}>Show Story</ClickButton>
       </div>
     );
   }
